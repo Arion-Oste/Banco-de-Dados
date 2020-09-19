@@ -1,0 +1,7 @@
+# Banco-de-Dados
+Aulas
+
+insert into pessoas values
+(DEFAULT,'Kaique','1993-03-19','F','90.0','3.00','Tailandia'),
+(DEFAULT,'Nicholas','2000-03-19','F','60.0','1.60','Disney'),
+(DEFAULT,'Kako','1993-12-19','M','60.0','1.60',Default);
