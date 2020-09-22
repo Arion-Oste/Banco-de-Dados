@@ -1,0 +1,57 @@
+# Banco-de-Dados
+Aulas
+
+select * from pessoas;
+describe pessoas;
+
+ALTER  TABLE pessoas
+add column profissao varchar(10) after nome; /* Deixa depois da coluca que escolheu*/
+
+alter table pessoas
+drop column profissao;
+
+alter table pessoas
+add column codigo int first; /*'Deixa em primeiro'*/
+
+alter table pessoas
+modify column profissao varchar (20) not null default ''; /*tipo e construents*/
+
+alter table pessoas
+change column profissao prof varchar (20); /*tipos constraent e nome da coluna*/
+
+alter table pessoas
+rename to gafanhotos;
+
+describe gafanhotos;
+
+create table if not exists cursos (
+nome varchar(30) not null unique,
+descricao text,
+carga int unsigned,
+totaulas int unsigned,
+ano year default '2016'
+)default charset = utf8;
+
+alter table cursos
+add column idccurso int first; /*'Deixa em primeiro'*/
+
+alter table cursos
+change column idccurso idcurso int(11); /*tipos constraent e nome da coluna*/
+
+use cadastro;
+
+ alter table cursos
+ add primary key (idcurso); 
+ 
+describe cursos;
+
+drop table if exists test;
+
+ create table if not exists test(
+ id int,
+ nome varchar (10),
+ idade int
+ );
+ 
+ insert into test value
+ ('1','Pedro','22');
