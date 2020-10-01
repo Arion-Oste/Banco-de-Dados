@@ -1,0 +1,30 @@
+# Banco-de-Dados
+Aulas
+
+select * from cursos
+where nome  like '%a%' /* % e usado pra substitui eo _ exiga que tenho algo no _*/
+
+update cursos set nome = 'PáOO'  where idcurso = '9';
+
+select * from cursos
+
+select * from cursos
+where nome  like 'p__t%';
+
+
+select * from gafanhotos
+where nome like '%silva'
+
+select distinct nacionalidade from gafanhotos /* DISTINCT nao mostra varias vezes o mesmo select */
+order by nacionalidade;
+
+select count(*) from cursos where carga >40; /* count(*) ele conta*/
+
+select max(carga) from cursos
+order by carga;
+
+select nome, min(totaulas) from cursos where ano = '2016'/* comando max Ele mostra o maximo e min mostra o minimo*/
+
+select sum(totaulas) from cursos where ano  = '2016';
+
+select AVG(totaulas) from cursos;/* media
