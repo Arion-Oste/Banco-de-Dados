@@ -1,0 +1,32 @@
+# Banco-de-Dados
+Aulas
+use cadastro
+
+describe gafanhotos;
+
+alter table gafanhotos add column cursopreferido int;
+
+alter table gafanhotos
+add foreign key(cursopreferido)
+references cursos(idcursos)
+
+select * from gafanhotos;
+select * from cursos;
+
+update gafanhotos set cursopreferido = '6' where id = '1';
+
+delete from cursos where idcurso = '28';
+
+select nome, cursopreferido from gafanhotos;
+
+select nome,ano from cursos;
+
+select g.nome, c.nome, c.ano
+from gafanhotos as g inner join cursos as c on c.idcurso = g.cursopreferido /* juntas as tabelas inner especifica que possuem relacionamento, as = apelidos de coluna  alter join */
+order by g.nome;
+
+
+select g.nome, c.nome, c.ano
+from gafanhotos as g  left outer join cursos as c
+on c.idcurso = g.cursopreferido /*inner especifica ligaçoes que possuem relacionamento entra tabelas, as = apelidos de coluna  alter join  outer join da preferencia , tambem pode se usa left ou right para escolhe a preferencia na situação*/
+order by g.nome;
